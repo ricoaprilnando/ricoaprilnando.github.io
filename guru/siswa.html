@@ -26,18 +26,56 @@
             <tbody>
                 <tr>
                     <td>1</td>
-                    <td>Rico April Nando</td>
+                    <td>Ahmad Zacky</td>
                     <td>162410101021</td>
-                    <td>12345678</td>
-                    <td><button onclick="window.location.href='ubahsiswa.html'">Ubah</button><button>Hapus</button></td>
+                    <td>*******</td>
+                    <td>
+                        <div class="content">
+                            <button onclick="document.getElementById('modal-wrapper').style.display='block'">
+                                Hapus</button>
+                        </div>
+                        <div id="modal-wrapper" class="modal">
+                            <form action="index.html" class="modal-content animate" name="tambah" method="GET"
+                                onsubmit="validasimateri()">
+                                <div class="imgcontainer">
+                                    <span onclick="document.getElementById('modal-wrapper').style.display='none'"
+                                        class="close" title="Close PopUp">&times;</span>
+                                    <img src="../img/logoblue.png" alt="Avatar" class="avatar">
+                                    <h2 style="color:black;">Apakah anda akan menghapus ?</h2>
+                                </div>
+                                <div class="content">
+                                    <button type="submit" style="color: white; background-color: green;">YA</button>
+                                    <button type="submit" style="color: white; background-color: red;">TIDAK</button>
+                                </div>
+                            </form>
+                        </div>
+                    </td>
                 </tr>
                 <tr>
                     <td>2</td>
                     <td>Rico April Nando</td>
                     <td>162410101021</td>
-                    <td>12345678</td>
+                    <td>*******</td>
                     <td>
-                        <button onclick="window.location.href='ubahsiswa.html'">Ubah</button><button>Hapus</button>
+                        <div class="content">
+                            <button onclick="document.getElementById('modal-wrapper').style.display='block'">
+                                Hapus</button>
+                        </div>
+                        <div id="modal-wrapper" class="modal">
+                            <form action="index.html" class="modal-content animate" name="tambah" method="GET"
+                                onsubmit="validasimateri()">
+                                <div class="imgcontainer">
+                                    <span onclick="document.getElementById('modal-wrapper').style.display='none'"
+                                        class="close" title="Close PopUp">&times;</span>
+                                    <img src="../img/logoblue.png" alt="Avatar" class="avatar">
+                                    <h2 style="color:black;">Apakah anda akan menghapus ?</h2>
+                                </div>
+                                <div class="content">
+                                    <button type="submit" style="color: white; background-color: green;">YA</button>
+                                    <button type="submit" style="color: white; background-color: red;">TIDAK</button>
+                                </div>
+                            </form>
+                        </div>
                     </td>
                 </tr>
             </tbody>
@@ -50,7 +88,7 @@
     </div>
     <div id="modal-wrapper" class="modal">
 
-        <form action="index.html" class="modal-content animate" name="siswa" method="GET" onsubmit="validasi()">
+        <form action="index.html" class="modal-content animate" name="siswa" method="GET" onsubmit="validasisiswa()">
             <div class="imgcontainer">
                 <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close"
                     title="Close PopUp">&times;</span>
@@ -58,10 +96,10 @@
                 <h2 style="color:black;">Tambah SISWA</h2>
             </div>
             <div class="content">
-                <input type="text" name="nis" id="nis" placeholder="no">
-                <input type="text" name="nis" id="nis" placeholder="Nama">
+                <input type="text" name="nis" id="no" placeholder="no">
+                <input type="text" name="nis" id="nama" placeholder="Nama">
                 <input type="text" name="nis" id="nis" placeholder="NIS">
-                <input type="text" name="nis" id="nis" placeholder="Password">
+                <input type="text" name="nis" id="pass" placeholder="Password">
                 <button type="submit" style="color: white; background-color: black;">tambah</button>
             </div>
         </form>

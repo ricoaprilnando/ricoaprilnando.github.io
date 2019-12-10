@@ -1,16 +1,10 @@
-$(document).ready(function () {
-    $(".menu-icon").on("click", function () {
-        $("nav ul").toggleClass("showing");
-    });
-});
-
-
 var modal = document.getElementById('modal-wrapper');
 window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
 }
+
 
 
 function validasisiswa() {
@@ -86,6 +80,70 @@ function validasitugastambah() {
     var x = document.forms["tambah"]["ket"].value;
     if (x = null || x == "") {
         alert("Isi KETERANGAN!!!")
+        return false;
+    }
+}
+
+function validasimateri() {
+    var x = document.forms["tambah"]["no"].value;
+    if (x = null || x == "") {
+        alert("Isi NO!!!");
+        return false;
+    }
+    var x = document.forms["tambah"]["mtr"].value;
+    if (x = null || x == "") {
+        alert("Isi TUGAS!!!");
+        return false;
+    }
+    var x = document.forms["tambah"]["ket"].value;
+    if (x = null || x == "") {
+        alert("Isi KETERANGAN!!!")
+        return false;
+    }
+    var x = document.forms["tambah"]["file"].value;
+    if (x = null || x == "") {
+        alert("Isi FILE!!!")
+        return false;
+    }
+}
+
+function validasisiswa() {
+    var x = document.forms["siswa"]["no"].value;
+    if (x = null || x == "") {
+        alert("Isi NO!!!");
+        return false;
+    }
+    var x = document.forms["siswa"]["nama"].value;
+    if (x = null || x == "") {
+        alert("Isi NAMA!!!");
+        return false;
+    }
+    var x = document.forms["siswa"]["nis"].value;
+    if (x = null || x == "") {
+        alert("Isi NIS/NIP!!!")
+        return false;
+    }
+    var x = document.forms["siswa"]["pass"].value;
+    if (x = null || x == "") {
+        alert("Isi PASSWORD!!!")
+        return false;
+    }
+}
+
+function validasiprofil() {
+    var x = document.forms["profil"]["nama"].value;
+    if (x = null || x == "") {
+        alert("Isi NAMA!!!");
+        return false;
+    }
+    var x = document.forms["profil"]["nis"].value;
+    if (x = null || x == "") {
+        alert("Isi NIS/NIP!!!")
+        return false;
+    }
+    var x = document.forms["profil"]["pass"].value;
+    if (x = null || x == "") {
+        alert("Isi PASSWORD!!!")
         return false;
     }
 }

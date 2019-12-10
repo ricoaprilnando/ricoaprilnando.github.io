@@ -31,7 +31,27 @@
                     <td>Design web menggunakan bootstrap</td>
                     <td>File.pdf</td>
                     <td><button>Download</button></td>
-                    <td><button>Hapus</button></td>
+                    <td>
+                        <div class="content">
+                            <button onclick="document.getElementById('modal-wrapper').style.display='block'">
+                                Hapus</button>
+                        </div>
+                        <div id="modal-wrapper" class="modal">
+                            <form action="index.html" class="modal-content animate" name="tambah" method="GET"
+                                onsubmit="validasimateri()">
+                                <div class="imgcontainer">
+                                    <span onclick="document.getElementById('modal-wrapper').style.display='none'"
+                                        class="close" title="Close PopUp">&times;</span>
+                                    <img src="../img/logoblue.png" alt="Avatar" class="avatar">
+                                    <h2 style="color:black;">Apakah anda akan menghapus ?</h2>
+                                </div>
+                                <div class="content">
+                                    <button type="submit" style="color: white; background-color: green;">YA</button>
+                                    <button type="submit" style="color: white; background-color: red;">TIDAK</button>
+                                </div>
+                            </form>
+                        </div>
+                    </td>
                 </tr>
             </tbody>
         </table>
@@ -42,7 +62,7 @@
             Tambah</button>
     </div>
     <div id="modal-wrapper" class="modal">
-        <form action="index.html" class="modal-content animate" name="siswa" method="GET" onsubmit="validasi()">
+        <form action="index.html" class="modal-content animate" name="tambah" method="GET" onsubmit="validasimateri()">
             <div class="imgcontainer">
                 <span onclick="document.getElementById('modal-wrapper').style.display='none'" class="close"
                     title="Close PopUp">&times;</span>
@@ -50,10 +70,10 @@
                 <h2 style="color:black;">Tambah Materi</h2>
             </div>
             <div class="content">
-                <input type="text" name="nis" id="nis" placeholder="2">
-                <input type="text" name="nis" id="nis" placeholder="Materi">
-                <input type="text" name="nis" id="nis" placeholder="keterangan">
-                <input type="file" name="nis" id="nis" placeholder="File">
+                <input type="text" name="nis" id="no" placeholder="2">
+                <input type="text" name="nis" id="mtr" placeholder="Materi">
+                <input type="text" name="nis" id="ket" placeholder="keterangan">
+                <input type="file" name="nis" id="file" placeholder="File">
                 <button type="submit" style="color: white; background-color: black;">tambah</button>
             </div>
         </form>

@@ -9,7 +9,7 @@
     <title>E-Class</title>
     <link rel="icon" type="image/png" href="../img/icon.png">
     <script type="text/javascript" src="../js/jQuery.js"></script>
-    <script type="text/javascript" src="../js/script.js"></script>
+    <script type="text/javascript" src="../js/nav.js"></script>
 
 </head>
 
@@ -22,9 +22,10 @@
             <ul>
                 <li><a href="beranda.html" class="klik_menu" id="beranda"><strong>E-Class</strong></a></li>
                 <li><a class="klik_menu" id="tugas">TUGAS</a></li>
+                <li><a class="klik_menu" id="pengumpulan">PENGUMPULAN</a></li>
                 <li><a class="klik_menu" id="materi">MATERI</a></li>
                 <li><a class="klik_menu" id="siswa">SISWA</a></li>
-                <li><a class="klik_menu" id="profil">profil</a></li>
+                <li><a class="klik_menu" id="profil">PROFIL</a></li>
                 <li><a href="../index.html">KELUAR</a></li>
             </ul>
         </nav>
@@ -49,6 +50,8 @@
                 $('.badan').load('beranda.html');
             } else if (menu == "tugas") {
                 $('.badan').load('tugas.html');
+            } else if (menu == "pengumpulan") {
+                $('.badan').load('pengumpulan.html');
             } else if (menu == "materi") {
                 $('.badan').load('materi.html');
             } else if (menu == "siswa") {
@@ -57,7 +60,6 @@
                 $('.badan').load('profil.html');
             }
         });
-        // halaman yang di load default pertama kali
         $('.badan').load('beranda.html');
 
     });
