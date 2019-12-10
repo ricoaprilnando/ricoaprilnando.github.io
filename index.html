@@ -1,27 +1,63 @@
+<!DOCTYPE html>
 <html>
+
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <title>E-Class</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="icon" type="image/png" href="img/icon.png">
+  <script type="text/javascript" src="js/jQuery.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+
 </head>
+
 <body>
- 
-  <h1>E-Class</h1>
-  <h4>MEMBUAT SISTEM BELAJARMU MUDAH</h4>
- 
-  <div class="login">
-  <p class="mantap">LOGIN</p> 
-    <form>
-      <label></label>
-      <input type="text" name="username" class="form" placeholder="username">
-      <label></label>
-      <input type="text" name="password" class="form" placeholder="password">
- 
-      <input type="submit" class="tombol" value="LOGIN">
- 
-    </form>
-    
+  <div class="content">
+    <nav>
+      <div class="menu-icon">
+        <i href="">=</i>
+      </div>
+      <ul>
+        <li><a href=""><strong>E-Class</strong></a></li>
+        <li><a class="klik_menu" id="beranda">BERANDA</a></li>
+        <li><a class="klik_menu" id="fitur">FITUR</a></li>
+        <li><a class="klik_menu" id="tentang">TENTANG</a></li>
+        <li><a class="klik_menu" id="masuk">MASUK</a></li>
+      </ul>
+    </nav>
+
+
+
+    <div class="badan"> </div>
+
+    <footer>
+      <p><strong>E-Class, Copyright &copy; 2019</strong></p>
+    </footer>
+
+
   </div>
- 
- 
 </body>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('.klik_menu').click(function () {
+      var menu = $(this).attr('id');
+      if (menu == "beranda") {
+        $('.badan').load('beranda.html');
+      } else if (menu == "fitur") {
+        $('.badan').load('fitur.html');
+      } else if (menu == "tentang") {
+        $('.badan').load('tentang.html');
+      } else if (menu == "masuk") {
+        $('.badan').load('masuk.html');
+      }
+    });
+    // halaman yang di load default pertama kali
+    $('.badan').load('beranda.html');
+
+  });
+</script>
+
 </html>
